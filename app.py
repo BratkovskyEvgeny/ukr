@@ -78,19 +78,22 @@ def run():
     image = Image.open('logo.png')
 
     st.sidebar.image(image)
+
+    sidebar_ttl = ("Приложение для нетворкинга с УКР😎")
     
     question = ("В каком режиме сделать прогноз, Онлайн\n"
                 "(Online) или загрузкой файла данных(Batch)?")
     
     add_selectbox = st.sidebar.selectbox(question, ("Online", "Batch"))
 
-    sidebar_ttl = ("Демо-приложение для нетворкинга с УКР")
+   
                    
     st.sidebar.info(sidebar_ttl)
 
     st.title("Прогнозирование дефолта:")
 
     if add_selectbox == "Online":
+        st.baloons()
         RevolvingUtilizationOfUnsecuredLines = \
             st.number_input("RevolvingUtilizationOfUnsecuredLines")
         age = st.number_input("age", step=1)
