@@ -76,6 +76,7 @@ with open('pipeline_for_deployment.pkl', 'rb') as f:
 def run():
     from PIL import Image
     image = Image.open('logo.png')
+    st.sidebar.info(sidebar_ttl)
 
     st.sidebar.image(image)
 
@@ -88,7 +89,7 @@ def run():
 
    
                    
-    st.sidebar.info(sidebar_ttl)
+   
 
     st.title("Прогнозирование дефолта:")
 
