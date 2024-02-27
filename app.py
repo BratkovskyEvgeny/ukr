@@ -88,7 +88,7 @@ def run():
     
     add_selectbox = st.sidebar.selectbox(question, ("Online", "Batch"))
 
-   
+    st.sidebar.info("Разработчик - Братковский Е.В.")
                    
    
 
