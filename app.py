@@ -93,7 +93,7 @@ def run():
     st.title("Прогнозирование дефолта:")
 
     if add_selectbox == "Online":
-        st.baloons()
+        st.balloons()
         RevolvingUtilizationOfUnsecuredLines = \
             st.number_input("RevolvingUtilizationOfUnsecuredLines")
         age = st.number_input("age", step=1)
