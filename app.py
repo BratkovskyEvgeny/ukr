@@ -84,8 +84,8 @@ def run():
     
     add_selectbox = st.sidebar.selectbox(question, ("Online", "Batch"))
 
-    sidebar_ttl = ("Прогнозирование дефолта с использованием\n" 
-                   "логистической регрессии.")
+    sidebar_ttl = ("Демо-приложение для нетворкинга с УКР")
+                   
     st.sidebar.info(sidebar_ttl)
 
     st.title("Прогнозирование дефолта:")
