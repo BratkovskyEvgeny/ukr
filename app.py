@@ -84,11 +84,11 @@ def run():
     
     add_selectbox = st.sidebar.selectbox(question, ("Online", "Batch"))
 
-    sidebar_ttl = ("Прогнозирование просрочки с использованием\n" 
-                   "метода логистической регрессии.")
+    sidebar_ttl = ("Прогнозирование дефолта с использованием\n" 
+                   "логистической регрессии.")
     st.sidebar.info(sidebar_ttl)
 
-    st.title("Прогнозирование просрочки:")
+    st.title("Прогнозирование дефолта:")
 
     if add_selectbox == "Online":
         RevolvingUtilizationOfUnsecuredLines = \
@@ -132,7 +132,7 @@ def run():
         }
         input_df = pd.DataFrame([input_dict])
 
-        if st.button("Спрогнозировать вероятность просрочки"):
+        if st.button("Спрогнозировать вероятность дефолта"):
 
             # выполняем предварительную обработку новых данных
             input_df = preprocessing(input_df)
@@ -141,7 +141,7 @@ def run():
             output = pipe.predict_proba(input_df)[:, 1]
             output = str(output)
 
-        st.success("Вероятность просрочки: {}".format(output))
+        st.success("Вероятность дефолта: {}".format(output))
 
     if add_selectbox == "Batch":
         
@@ -158,7 +158,7 @@ def run():
             prob = pipe.predict_proba(newdata)[:, 1]
 
             # вывод вероятностей на веб-странице
-            st.success("Вероятности просрочки для загруженных данных:")
+            st.success("Вероятности дефолта для загруженных данных:")
             st.write(prob)
 
 
