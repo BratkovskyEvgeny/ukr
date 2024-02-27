@@ -92,10 +92,10 @@ def run():
                    
    
 
-    st.title("Прогнозирование дефолта:")
+    st.title("Прогнозирование дефолта_демо для нетворкинга ЦАР-УКР")
 
     if add_selectbox == "Online":
-        st.balloons()
+        
         RevolvingUtilizationOfUnsecuredLines = \
             st.number_input("RevolvingUtilizationOfUnsecuredLines")
         age = st.number_input("age", step=1)
@@ -149,6 +149,7 @@ def run():
         st.success("Вероятность дефолта: {}".format(output))
 
     if add_selectbox == "Batch":
+        st.balloons()
         
         file_upload_ttl = ("Загрузите csv-файл с новыми данными\n"
                            "для вычисления вероятностей:")
