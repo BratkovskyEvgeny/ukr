@@ -75,11 +75,11 @@ with open('pipeline_for_deployment.pkl', 'rb') as f:
 #  функция запуска web-интерфейса
 def run():
     from PIL import Image
-    image = Image.open('logo.jpeg')
+    image = Image.open('logo.png')
 
     st.sidebar.image(image)
     
-    question = ("В каком режиме вы хотели сделать прогноз, Онлайн\n"
+    question = ("В каком режиме сделать прогноз, Онлайн\n"
                 "(Online) или загрузкой файла данных(Batch)?")
     
     add_selectbox = st.sidebar.selectbox(question, ("Online", "Batch"))
