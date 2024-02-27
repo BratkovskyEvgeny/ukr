@@ -108,7 +108,7 @@ def run():
    
 
     #st.title("Прогнозирование дефолта🏦💰")
-    st.markdown(f"<h1 style='text-align: center;'>Прогнозирование дефолта🏦💰</h1>", unsafe_allow_html=True)
+    st.markdown(f"<h1 style='text-align: center;'>:red[Прогнозирование дефолта]🏦💰</h1>", unsafe_allow_html=True)
     st.markdown(f"<h5 style='text-align: center;'>Демка для Валентина, Станислава, Тимофея, Павла</h5>", unsafe_allow_html=True)
 
     if add_selectbox == "Online":
