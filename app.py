@@ -81,6 +81,7 @@ def run():
     st.sidebar.image(image)
 
     sidebar_ttl = ("Приложение для нетворкинга с УКР")
+    st.sidebar.info(sidebar_ttl)
     
     question = ("В каком режиме сделать прогноз, Онлайн\n"
                 "(Online) или загрузкой файла данных(Batch)?")
@@ -89,7 +90,7 @@ def run():
 
    
                    
-   st.sidebar.info(sidebar_ttl)
+   
 
     st.title("Прогнозирование дефолта:")
 
