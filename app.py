@@ -7,39 +7,20 @@ import streamlit as st
 import dill
 
 
-with st.sidebar:
-    selected_lang = option_menu(
-                    menu_title=None,
-                    options=[LANG_RU, ],#LANG_EN, 
-                    icons=["globe2", "translate"],
-                    menu_icon="cast",
-                    default_index=0,
-                    orientation=None,
-                    #visibility: 'hidden'
-                    
-                    styles=HEADER_STYLES)
+hide_streamlit_style = """  
+<style>
 
-        
-    selected_lang
-##MainMenu {visibility: hidden;}
-#hide_streamlit_style = """  
-#<style>
-
-#footer {visibility: hidden;}
+footer {visibility: hidden;}
 #sidebar {visibility: hidden;}
-#</style>
+</style>
 
-#"""
-#st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 
-st.markdown("""
-    <style>
-        section[data-testid="stSidebar"][aria-expanded="true"]{
-            display: none;
-        }
-    </style>
-    """, unsafe_allow_html=True)
+
+
+
 # функция предварительной подготовки
 def preprocessing(df):
 
